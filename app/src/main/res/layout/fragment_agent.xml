@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/background" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="🤖 UPSC Study Agent" android:textSize="22sp" android:textStyle="bold"
+            android:textColor="@color/primary" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Your personal UPSC preparation companion" android:textSize="14sp"
+            android:textColor="@color/text_secondary" android:layout_marginTop="4dp" />
+
+        <!-- Motivation Card -->
+        <com.google.android.material.card.MaterialCardView android:id="@+id/card_new_motivation"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" app:cardCornerRadius="16dp" app:cardElevation="4dp"
+            app:cardBackgroundColor="#1A237E" android:foreground="?attr/selectableItemBackground">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="20dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="💪 Motivation (Tap to refresh)" android:textColor="#BBDEFB" android:textSize="13sp" />
+                <TextView android:id="@+id/tv_agent_quote" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="@android:color/white" android:textSize="16sp" android:textStyle="italic"
+                    android:layout_marginTop="8dp" android:lineSpacingExtra="4dp" />
+                <TextView android:id="@+id/tv_agent_quote_author" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="#90CAF9" android:textSize="13sp" android:layout_marginTop="6dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Study Tip Card -->
+        <com.google.android.material.card.MaterialCardView android:id="@+id/card_new_tip"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" app:cardCornerRadius="12dp" app:cardElevation="2dp"
+            android:foreground="?attr/selectableItemBackground">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="📝 Study Tip (Tap to refresh)" android:textStyle="bold" android:textSize="14sp"
+                    android:textColor="@color/accent" />
+                <TextView android:id="@+id/tv_agent_tip" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textSize="14sp" android:layout_marginTop="8dp" android:lineSpacingExtra="4dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Subject Advice Card -->
+        <com.google.android.material.card.MaterialCardView android:id="@+id/card_subject_advice"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" app:cardCornerRadius="12dp" app:cardElevation="2dp"
+            android:foreground="?attr/selectableItemBackground">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:padding="16dp" android:gravity="center_vertical">
+                <TextView android:layout_width="40dp" android:layout_height="40dp" android:text="📖"
+                    android:textSize="28sp" android:gravity="center" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Subject-Specific Advice" android:textStyle="bold" android:textSize="15sp"
+                        android:textColor="@color/text_primary" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Get expert strategy for each UPSC subject" android:textSize="12sp"
+                        android:textColor="@color/text_secondary" />
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="→" android:textSize="20sp" android:textColor="@color/primary" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Daily Advice -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" app:cardCornerRadius="12dp" app:cardElevation="2dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🎯 Today's Strategic Advice" android:textStyle="bold" android:textSize="14sp"
+                    android:textColor="@color/primary" />
+                <TextView android:id="@+id/tv_agent_daily_advice" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textSize="14sp" android:layout_marginTop="8dp" android:lineSpacingExtra="4dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Document Library Section -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="📚 Document Library" android:textSize="18sp" android:textStyle="bold"
+            android:textColor="@color/text_primary" android:layout_marginTop="20dp" />
+
+        <com.google.android.material.card.MaterialCardView android:id="@+id/card_add_document"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" app:cardCornerRadius="12dp" app:cardElevation="2dp"
+            app:strokeColor="@color/primary" app:strokeWidth="1dp"
+            android:foreground="?attr/selectableItemBackground">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:padding="16dp" android:gravity="center">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="➕ Add PDF / HTML / Text Document" android:textSize="15sp"
+                    android:textColor="@color/primary" android:textStyle="bold" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView android:id="@+id/tv_empty_docs" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="No documents added yet" android:textAlignment="center" android:textSize="14sp"
+            android:textColor="@color/text_secondary" android:padding="16dp" android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_documents"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false" android:layout_marginTop="4dp" />
+
+        <View android:layout_width="match_parent" android:layout_height="24dp" />
+    </LinearLayout>
+</ScrollView>

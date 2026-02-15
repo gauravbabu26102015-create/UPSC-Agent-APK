@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:gravity="center"
+    android:padding="32dp" android:background="@color/primary">
+    <TextView android:id="@+id/tv_alarm_type" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:textSize="22sp" android:textColor="@android:color/white" android:textStyle="bold" />
+    <TextView android:id="@+id/tv_alarm_subject_ring" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginTop="20dp" android:textSize="36sp" android:textColor="@android:color/white" android:textStyle="bold" />
+    <TextView android:id="@+id/tv_alarm_message" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginTop="16dp" android:textSize="18sp" android:textColor="#CCFFFFFF" android:textAlignment="center" />
+    <TextView android:id="@+id/tv_alarm_motivation" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginTop="32dp" android:textSize="14sp" android:textColor="#AAFFFFFF"
+        android:textStyle="italic" android:textAlignment="center" android:paddingHorizontal="16dp" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center" android:layout_marginTop="48dp">
+        <Button android:id="@+id/btn_snooze_alarm" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Snooze 5m" android:layout_marginEnd="16dp" style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:textColor="@android:color/white" />
+        <Button android:id="@+id/btn_dismiss_alarm" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Dismiss" android:backgroundTint="@android:color/white" android:textColor="@color/primary" />
+    </LinearLayout>
+</LinearLayout>
